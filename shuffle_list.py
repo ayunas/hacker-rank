@@ -6,7 +6,6 @@ def shuffle_list(l):
         l[rand_i],l[i] = l[i],l[rand_i]
     return l
 
-
 shuffled = shuffle_list([1,2,3,4,5,6,7,8,9,10])
 print(shuffled)
 
