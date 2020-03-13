@@ -1,11 +1,7 @@
 def one_diff(nums):
-    print('nums', nums)
     s = sorted(set(nums))  #list of unique nums in sorted order
-    print('sorted setted', s)
     v = [nums.count(s[i]) + nums.count(s[i]+1) for i in range(len(s))]
     #for every element in the sorted & setted array, count the number of repeating elements and add it to the number of the repeating elements + 1.  only repeating with the repeating + 1 will satisfy condition of all the elmeents in the array to be <= 1.  return the max occurences
-
-    print(v)
     return max(v)
 
 nums = [12,4,1,3,4,5,5,5,8,10,10,10]
