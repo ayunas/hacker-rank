@@ -6,15 +6,29 @@ class LinkedNode:
     def __repr__(self):
         return str({'value' : self.value, 'next' : self.next})
 
-
 def deleteKey(ll,key):
-
+    print(ll)
     removed = 0
+    remaining = []
     node = ll
     prev = None
 
     if not ll.value:
         return 0
+
+    while ll.value == key:
+    # if node.value == key:
+        removed += 1
+        ll = ll.next
+        if ll is None:
+            break
+        # prev = node
+        # node = node.next #go to next element
+        # ll = ll.next
+        # prev.next = None
+        # prev.next = node.next
+
+    print(ll)
 
     while node:
         prev = node
@@ -26,19 +40,25 @@ def deleteKey(ll,key):
         if node.value == key:
             prev.next = node.next
             removed += 1
-        
-        
-    
+
     print('updated ll', ll)
-    return (1,removed)
+    node = ll
+
+    while node:
+        remaining.append(node.value)
+        node = node.next
+
+    return remaining
 
 
-ll = LinkedNode(10)
-ll.next = LinkedNode(11)
-ll.next.next = LinkedNode(12)
-ll.next.next.next = LinkedNode(13)
+ll = LinkedNode(1000)
+ll.next = LinkedNode(1000)
+ll.next.next = LinkedNode(2)
+ll.next.next.next = LinkedNode(4)
+ll.next.next.next.next = LinkedNode(5)
+ll.next.next.next.next.next = LinkedNode(19)
 
-x = deleteKey(ll,13)
+x = deleteKey(ll,1000)
 print(x)
 
 
