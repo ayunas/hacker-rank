@@ -60,6 +60,8 @@ ll.next.next.next.next.next = LinkedNode(19)
 
 x = deleteKey(ll,1000)
 print(x)
+print(locals())
+print(globals())
 
 
 
