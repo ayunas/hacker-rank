@@ -7,14 +7,13 @@ class LinkedNode:
         return str({'value' : self.value, 'next' : self.next})
 
 def deleteKey(ll,key):
-    print(ll)
     removed = 0
     remaining = []
     node = ll
     prev = None
 
-    if not ll.value:
-        return 0
+    if not ll:
+        return []
 
     while ll.value == key:
     # if node.value == key:
@@ -50,6 +49,7 @@ def deleteKey(ll,key):
 
     return remaining
 
+# ll = LinkedNode()
 
 ll = LinkedNode(1000)
 ll.next = LinkedNode(1000)
