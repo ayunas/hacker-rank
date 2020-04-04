@@ -20,7 +20,7 @@
 import numpy, operator
 from functools import reduce
 
-def hour_glasses(mx):
+def hour_glass_sum(mx):
     M = numpy.array(mx)
     print('Matrix: \n', M, '\n')
 
@@ -68,5 +68,5 @@ def generate_matrix():
     return matrix
 
 M = generate_matrix()
-hour_glasses(M)
+hour_glass_sum(M)
 
